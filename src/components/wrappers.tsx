@@ -1,23 +1,30 @@
-
 import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
   height:100vh;
   background-color: ${props => props.theme.colors.secondary};
   color: #ffffff;
+  position:relative;
   /* box-sizing: content-box;    */
 `;
 
 export const NavWrapper = styled.nav`
     background-color: ${props => props.theme.colors.primary};
-    padding: 0 15px;
+    padding: 0 ${props=>props.theme.spacing['4s']};
+   
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
     height:90px;
-    font-size: 15.5px;
+    width:100%;
+    letter-spacing:-0.5px;
+    font-size: 15px;
     font-family: 'ps commons',sans-serif;
+    position:fixed;
+    top: 0;
+    left:0;
+
  `;
 export const LogoWrapper = styled.div`
     display:flex;
@@ -34,11 +41,12 @@ export const AllLinksWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     width: 90%;
+    
 `;
 export const LinksWrapper = styled.ul`
-    margin:0!important;
+    margin:0 30px 0 0!important;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     list-style-type: none;
   
@@ -93,11 +101,12 @@ export const HeaderWrapper = styled.header`
     }
 `;
 export const HomeHeaderWrapper = styled.header`
-    background-image: url("/img/header-hero.jpg");
+    background-image: url("/img/header-hero-home.jpg");
     width:100%;
-    height: 300px;
+    height: 514px;
     background-size: cover;
     background-position: top center;
+
     div{
         /* padding: 45px 0; */
         margin: 0 auto;    
@@ -124,7 +133,15 @@ export const HomeHeaderWrapper = styled.header`
         }
     }
 `;
-export const Spacer = styled.div`
+export const Spacer = styled.div<{height?:string|number}>`
+    height:${props=>props.height?props.height:"80px"};
     width:100%;
-    height:80px;
+`;
+
+export const ContainerWrapper = styled.div`
+    padding: 0 ${props=>props.theme.spacing['4s']} ;
+`;
+
+export const Section = styled.div`
+    
 `;

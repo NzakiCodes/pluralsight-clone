@@ -11,5 +11,15 @@ declare module 'styled-components'{
                 main:string;
             }
         }
+        spacing:{
+            ['1s']:string;
+            ['2s']:string;
+            ['3s']:string;
+            ['4s']:string;
+            ['5s']:string;
+            ['6s']:string;
+            ['7s']:string;
+            ['8s']:string;
+        }
     }
 }

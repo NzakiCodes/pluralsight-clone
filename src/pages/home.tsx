@@ -1,12 +1,16 @@
 import Header from "../components/header";
 import Navbar from "../components/navbar";
-import { AppWrapper } from "../components/wrappers";
+import { AppWrapper, ContainerWrapper, Spacer } from "../components/wrappers";
 
-const HomePage = ()=>{
-    return(
+const HomePage = () => {
+    return (
         <AppWrapper>
-            <Navbar/>
-            <Header/>
+            <Navbar />
+            <Spacer height="90px"/>
+            <Header />
+            <ContainerWrapper>
+                Hello
+            </ContainerWrapper>
         </AppWrapper>
     )
 };

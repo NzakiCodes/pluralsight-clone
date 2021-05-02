@@ -13,10 +13,10 @@ export const SearchIcon = () => <svg viewBox="0 0 797 801" width="20" height="20
 //     open:boolean;
 // }
 
-export const Arrow = styled.i<{open:boolean}>`
+export const Arrow = styled.i<{ open: boolean }>`
  display:inline-block;
  height:4px;
- position:relative;
+ position:relative; 
  transform:rotate(45deg);
  border:solid;
  border-width:0 2px 2px 0;
@@ -24,8 +24,11 @@ export const Arrow = styled.i<{open:boolean}>`
  color:#fff;
  top:-3px;
  right:0;
- ${props=>props.open&& css`
+ transition : all 0.2s;
+
+ ${props => props.open && css`
     top:1px;
-    transform:scaleY(-1) rotate(45deg)
+    transform:scaleY(-1) rotate(45deg);
+    transition : all 0.3s;
  `};
 `;
